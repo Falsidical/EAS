@@ -34,6 +34,7 @@ body {
   width: 720px;
   height: 720px;
   border: 1px solid #ffffff7c;
+  background-color: white;
 }
 
 .row {
@@ -44,6 +45,8 @@ body {
 .row > div {
   border: 1px solid #ffffff7c;
   flex: 1;
+  background-color: #202020;
+  opacity: 1;
 }
 
 .controls {
