@@ -1,12 +1,30 @@
 const grid = document.querySelector('.grid-container');
 const slider = document.querySelector('#slider');
 const sliderLabel = document.querySelector('#sliderLabel');
+const rainbowToggle = document.querySelector('#rainbow');
+const colorSelector = document.querySelector('#color');
+const clearGridBtn = document.querySelector('#clearGrid');
 
-let rainbowMode = true;
+let rainbowMode = rainbowToggle.checked;
+let activeColor = colorSelector.value;
+let gridSize = slider.value;
+
+rainbowToggle.addEventListener('change', (e) => {
+  rainbowMode = !rainbowMode;
+});
+
+colorSelector.addEventListener('change', (e) => {
+  activeColor = e.target.value;
+});
 
 slider.addEventListener('input', (e) => {
   sliderLabel.innerText = `Size ${e.target.value}x${e.target.value}`;
-  drawGrid(e.target.value);
+  gridSize = e.target.value;
+  drawGrid(gridSize);
+});
+
+clearGridBtn.addEventListener('click', () => {
+  drawGrid(gridSize);
 });
 function drawCell() {
   const cell = document.createElement('div');
@@ -14,7 +32,7 @@ function drawCell() {
     if (rainbowMode) {
       cell.style.backgroundColor = randomColor();
     } else {
-      cell.style.backgroundColor = 'red';
+      cell.style.backgroundColor = activeColor;
     }
   });
   return cell;
@@ -41,4 +59,4 @@ function randomColor() {
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
-drawGrid(16);
+drawGrid(gridSize);

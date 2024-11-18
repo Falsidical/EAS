@@ -5,14 +5,27 @@
 }
 
 body {
-  background-color: #333;
+  background-color: #202020;
   color: #eee;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Saira', sans-serif;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.controls {
+  border: 2px solid grey;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.controls:hover {
+  background-color: #444444;
 }
 
 .grid-container {
