@@ -9,15 +9,17 @@ body {
   color: #eee;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Saira', sans-serif;
 }
 
 .grid-container {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height: 600px;
+  width: 720px;
+  height: 720px;
   border: 1px solid #ffffff7c;
 }
 
@@ -29,4 +31,10 @@ body {
 .row > div {
   border: 1px solid #ffffff7c;
   flex: 1;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
