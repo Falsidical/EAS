@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #ffffff7c;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.row > div {
+  border: 1px solid #ffffff7c;
+  flex: 1;
+}
